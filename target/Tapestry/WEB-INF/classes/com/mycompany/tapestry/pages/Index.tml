@@ -1,0 +1,8 @@
+<html t:type="layout" title="Tapestry Index"
+      t:sidebarTitle="Framework Version"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <h2>Home page</h2>
+    <p>You can choose any database and execute query</p>
+</html>

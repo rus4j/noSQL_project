@@ -1,0 +1,39 @@
+<html t:type="layout" title="About Tapestry"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_3.xsd"
+      xmlns:p="tapestry:parameter">
+
+    <div class="row">
+        <div class="span12">
+            <h1>MongoDB</h1>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="span4 offset3">
+            <t:zone t:id="formZone" id="formZone">
+                <t:form t:id="query" class="form-signin" t:zone="^">
+                    <h2 class="form-signin-heading">Please enter query</h2>
+                    <t:textfield t:id="queryText" validate="required" class="input-block-level" /><br/>
+                    <t:submit class="btn btn-large btn-primary" value="Execute" />
+                    <br/><br/>
+                    <table border='1'>
+                        <tr>
+                            <th>id</th>
+                            <th>name</th>
+                            <th>email</th>
+                        </tr>
+                    <p t:type="Loop" t:source="queryResult" t:value="qr" encoder="encoder">
+                        <tr>
+                            <td>${qr.get('id')}</td>
+                            <td>${qr.get('name')}</td>
+                            <td>${qr.get('email')}</td>
+                        </tr>
+                    </p>
+                    </table>
+                    
+                </t:form>
+            </t:zone>    
+        </div>
+    </div>
+
+</html>
