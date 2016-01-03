@@ -10,7 +10,7 @@ public class CassandraAPI <ResultSet> implements DataBaseAPI{
 
     public CassandraAPI() {
         cluster = Cluster.builder().addContactPoint("127.0.0.1").build();
-        session = cluster.connect("ships");
+        session = cluster.connect("users");
     }
 
     @Override
