@@ -15,7 +15,7 @@ public class CassandraAPI <ResultSet> implements DataBaseAPI{
 
     @Override
     public ResultSet executeQuery(String query) {
-        return (ResultSet) session.execute("Select * FROM users;");
+        return (ResultSet) session.execute(query);
     }
 
 }
